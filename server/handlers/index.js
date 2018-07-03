@@ -6,7 +6,7 @@ module.exports.bodyParserHandler = require('koa-body')({
     urlencoded: true
 });
 module.exports.serveHandler = require('koa-static')(require('path').join(__dirname, 'public'));
-module.exports.errorHandler =  async (next)=>{
+module.exports.errorHandler =  async (ctx ,next)=>{
     try {
        await next();
     } catch (err) {
