@@ -20,11 +20,10 @@ class Db {
 
   initialization() {
     this.pool.getConnection((conn_error , conn) => {
-      if (conn_error) conn_error;
+      if (conn_error) console.error(conn_error);
       for(let i = 0 ; i <= this.initialSQL.length - 1 ; i++){
-        console.log('dsa')
         conn.query(this.initialSQL[i] , (err) => {
-          if(err) console.log(err);
+          if(err) console.error(err);
         });
       }
       conn.release();
