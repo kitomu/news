@@ -1,6 +1,6 @@
 const models = require('./../models/mod');
-const router = require('koa-router');
-let route = router(); //Instantiate the router
+const Router = require('koa-router');
+const route = new Router(); //Instantiate the router
 
 route.get('/articles', models.getArticles);
 route.get('/articles/:id([0-9]{3,})', models.fetchArticle);
@@ -11,4 +11,4 @@ route.put('/articles/:id([0-9]{3,})', models.modifieArticle);
 route.post('/registrate', models.registrate);
 route.post('/authenticate', models.authenticate);
 
-module.exports = route.routes;
+module.exports = route;

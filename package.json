@@ -11,15 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.5.1",
-<<<<<<< HEAD
-    "mysql": "^2.15.0"
-=======
+    "mysql": "^2.15.0",
     "koa-body": "^4.0.4",
     "koa-compress": "^3.0.0",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0"
->>>>>>> c71b8be213cb0d739df0eca5e89a85030bfeac52
   },
   "devDependencies": {
     "nodemon": "^1.17.5"

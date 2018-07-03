@@ -6,7 +6,7 @@ class Db {
 
     this.driver = require('mysql');
     this.pool = this.driver.createPool(db_config);
-    //initial sql requests
+    //Запросы на создание таблиц
     this.initialSQL = [
       "DROP TABLE IF EXISTS users",
       "CREATE TABLE users (id INTEGER AUTO_INCREMENT, name VARCHAR(20) NOT NULL DEFAULT 'NULL', fname VARCHAR(20) NOT NULL DEFAULT 'NULL', login VARCHAR(20) NOT NULL DEFAULT 'NULL', password VARCHAR(20) NOT NULL DEFAULT 'NULL', mail VARCHAR(20) NOT NULL DEFAULT 'NULL', img_avatar VARCHAR(100) NULL DEFAULT NULL, PRIMARY KEY (id))",

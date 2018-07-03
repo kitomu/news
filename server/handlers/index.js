@@ -8,8 +8,9 @@ module.exports.bodyParserHandler = require('koa-body')({
 module.exports.serveHandler = require('koa-static')(require('path').join(__dirname, 'public'));
 module.exports.errorHandler =  async (next)=>{
     try {
-       await next;
+       await next();
     } catch (err) {
+        console.log(err);
        //Обработчик ошибок
     }
  };

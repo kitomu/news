@@ -1,8 +1,13 @@
+const db = require('./../common/db');
+
+
 module.exports.getArticles = async (ctx, next)=>{
     //Получить список статей
 };
 module.exports.fetchArticle = async (ctx, next)=>{
     //Получить статью по id
+    ctx.body = ctx.params.id;
+    console.log('thisway')
 };
 module.exports.deleteArticle = async (ctx, next)=>{
     //Удалить статью по id
